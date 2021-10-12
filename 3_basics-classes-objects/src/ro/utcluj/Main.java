@@ -16,7 +16,10 @@ import ro.utcluj.model.Student;
 public class Main {
 
   public static void main(String[] args) {
+    int[] numbers = new int[10];
+    Student[] students = new Student[10];
     Student firstStudent = new Student("Alex", "Bondor", "123");
+    students[0] = firstStudent;
     System.out.println(firstStudent.firstName);
 
     Student secondStudent = new Student();

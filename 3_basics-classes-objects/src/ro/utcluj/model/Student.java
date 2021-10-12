@@ -14,10 +14,10 @@ public class Student {
     System.out.println("hello");
   }
 
-  public Student(String a, String b, String c) {
-    this.firstName = a;
-    this.lastName = b;
-    this.uniqueIdentificationNumber = c;
+  public Student(String firstName, String lastName, String uniqueIdentificationNumber) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.uniqueIdentificationNumber = uniqueIdentificationNumber;
   }
 
   public String getFullName() {
