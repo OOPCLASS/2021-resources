@@ -1,16 +1,26 @@
 package ro.utcluj;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
 
+import ro.utcluj.model.Student;
+
+/**
+ * Create a StudentRegistry which holds an array of Student(s). Initialize the array
+ * with at least 10 instances (random values for the attributes). Every student
+ * could have one or more Course(s) which he/she attends. For each Course we should
+ * store the name, creditsNumber and an array of roomNumbers
+ */
 public class Main {
 
-  public static void main(String[] args) throws IOException {
-    ObjectMapper objectMapper = new ObjectMapper();
-    Path fileName = Path.of("resources/student-register.json");
-    String content = Files.readString(fileName);
-    StudentRegister studentRegister = objectMapper.readValue(content, StudentRegister.class);
+  public static void main(String[] args) {
+    Student firstStudent = new Student("Alex", "Bondor", "123");
+    System.out.println(firstStudent.firstName);
+
+    Student secondStudent = new Student();
+    secondStudent.uniqueIdentificationNumber = "234";
+    secondStudent.firstName = "Mircea";
+    secondStudent.lastName = "Muntean";
+
+    System.out.println(firstStudent.getFullName());
+    System.out.println(secondStudent.getFullName());
   }
 }
