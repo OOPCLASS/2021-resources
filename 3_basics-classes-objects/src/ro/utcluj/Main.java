@@ -1,6 +1,10 @@
 package ro.utcluj;
 
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.List;
 import ro.utcluj.model.Student;
 
 /**
@@ -15,7 +19,7 @@ import ro.utcluj.model.Student;
  */
 public class Main {
 
-  public static void main(String[] args) {
+  public static void main(String[] args) throws IOException {
     int[] numbers = new int[10];
     Student[] students = new Student[10];
     Student firstStudent = new Student("Alex", "Bondor", "123");
@@ -29,5 +33,14 @@ public class Main {
 
     System.out.println(firstStudent.getFullName());
     System.out.println(secondStudent.getFullName());
+
+    Path fileName = Path.of("resources/student-register.txt");
+    List<String> fileContent = Files.readAllLines(fileName);
+
+    for (String line : fileContent) {
+      String[] lineWords = line.split(" ");
+      String firstName = lineWords[0];
+      String lastName = lineWords[1];
+    }
   }
 }
