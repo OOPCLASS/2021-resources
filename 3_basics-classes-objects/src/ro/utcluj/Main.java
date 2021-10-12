@@ -8,6 +8,10 @@ import ro.utcluj.model.Student;
  * with at least 10 instances (random values for the attributes). Every student
  * could have one or more Course(s) which he/she attends. For each Course we should
  * store the name, creditsNumber and an array of roomNumbers
+ *
+ * 1. Try to read student info from a file students.txt
+ * 2. Try to read courses info from a file courses.txt
+ * 3. Add a method in StudentRegistry which adds a Student to the array inside StudentRegistry
  */
 public class Main {
 
