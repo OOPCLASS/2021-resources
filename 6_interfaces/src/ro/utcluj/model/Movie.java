@@ -1,4 +1,4 @@
-package ro.utcluj;
+package ro.utcluj.model;
 
 public class Movie implements Comparable, Identifiable {
 

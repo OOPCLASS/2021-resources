@@ -1,4 +1,4 @@
-package ro.utcluj;
+package ro.utcluj.model;
 
 public class Book extends Product implements Comparable {
 
@@ -23,6 +23,10 @@ public class Book extends Product implements Comparable {
 
   @Override
   public int compareTo(Object object) {
+    if (object instanceof Book) {
+      Book book = (Book) object;
+      return this.numberOfPages < book.getNumberOfPages() ? 1 : -1;
+    }
     return 0;
   }
 
