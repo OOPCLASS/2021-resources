@@ -1,6 +1,6 @@
 package ro.utcluj.model;
 
-public class Student implements Comparable, Identifiable {
+public class Student implements Comparable {
 
   private String name;
 
@@ -18,22 +18,11 @@ public class Student implements Comparable, Identifiable {
 
   @Override
   public int compareTo(Object object) {
-    if (object instanceof Student) {
-      Student student = (Student) object;
-      return this.name.compareTo(student.getName());
-    }
     return 0;
   }
 
   @Override
-  public int getId() {
-    return 0;
-  }
-
-  @Override
-  public String toString() {
-    return "Student{" +
-        "name='" + name + '\'' +
-        '}';
+  public String getDescription() {
+    return null;
   }
 }
