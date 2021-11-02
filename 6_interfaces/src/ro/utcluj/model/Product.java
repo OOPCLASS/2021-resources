@@ -1,18 +1,10 @@
 package ro.utcluj.model;
 
-public abstract class Product implements DescriptionAware {
+public abstract class Product {
 
-  private Double price;
+  public abstract String getDescription();
 
   public void describeYourself() {
-    System.out.println("Hello. I am " + getDescription());
-  }
-
-  public Double getPrice() {
-    return price;
-  }
-
-  public void setPrice(Double price) {
-    this.price = price;
+    System.out.println("Hello. I am a " + getDescription());
   }
 }

@@ -1,9 +1,14 @@
 package ro.utcluj.model;
 
-public class Movie extends Product {
+public class Movie implements Comparable, Identifiable {
 
   @Override
-  public String getDescription() {
-    return "movie-description";
+  public int compareTo(Object object) {
+    return 0;
+  }
+
+  @Override
+  public int getId() {
+    return 0;
   }
 }
