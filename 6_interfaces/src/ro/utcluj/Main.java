@@ -3,7 +3,6 @@ package ro.utcluj;
 import ro.utcluj.model.Book;
 import ro.utcluj.model.Student;
 import ro.utcluj.service.ArraysService;
-import ro.utcluj.service.FileStorageService;
 import ro.utcluj.service.InMemoryStorageService;
 import ro.utcluj.service.StorageService;
 
@@ -33,13 +32,13 @@ public class Main {
     students[2] = new Student("Ana");
     students[3] = new Student("Bogdan");
 
-    ArraysService.sort(students, true);
+    ArraysService.sort(students, false);
 
     for (Student student : students) {
       System.out.println(student);
     }
 
-    StorageService storageService = new FileStorageService();
+    StorageService storageService = new InMemoryStorageService();
     String address = storageService.store(new Student("Mircea"));
     Student retrievedObject = (Student) storageService.retrieve(address);
   }

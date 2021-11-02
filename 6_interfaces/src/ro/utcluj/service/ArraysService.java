@@ -12,9 +12,8 @@ public class ArraysService {
       // Find the minimum element in unsorted array
       int minIndex = i;
       for (int j = i + 1; j < n; j++) {
-        if (!reversed && array[j].compareTo(array[minIndex]) < 0) {
-          minIndex = j;
-        } else if (reversed && array[j].compareTo(array[minIndex]) > 0) {
+        if (!reversed && array[j].compareTo(array[minIndex]) < 0 ||
+            reversed && array[j].compareTo(array[minIndex]) > 0) {
           minIndex = j;
         }
       }
