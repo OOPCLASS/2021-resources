@@ -1,6 +1,6 @@
 package ro.utcluj.model;
 
-public class Book extends Product implements Comparable {
+public class Book extends Product implements Comparable, DescriptionAware {
 
   private int numberOfPages;
 
@@ -17,11 +17,6 @@ public class Book extends Product implements Comparable {
   }
 
   @Override
-  public String getDescription() {
-    return "book";
-  }
-
-  @Override
   public int compareTo(Object object) {
     if (object instanceof Book) {
       Book book = (Book) object;
@@ -31,9 +26,7 @@ public class Book extends Product implements Comparable {
   }
 
   @Override
-  public String toString() {
-    return "Book{" +
-        "numberOfPages=" + numberOfPages +
-        "} " + super.toString();
+  public String getDescription() {
+    return null;
   }
 }
