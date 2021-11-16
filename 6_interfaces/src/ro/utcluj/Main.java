@@ -3,6 +3,7 @@ package ro.utcluj;
 import ro.utcluj.model.Book;
 import ro.utcluj.model.Movie;
 import ro.utcluj.model.Product;
+import ro.utcluj.service.FileStorageService;
 
 public class Main {
 
