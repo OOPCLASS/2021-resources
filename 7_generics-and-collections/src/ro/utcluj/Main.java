@@ -10,7 +10,7 @@ import java.util.Map;
  * - Implement Pair generic class
  *      - it should have two attributes named 'left' & 'right'
  *      - create a list of pair objects
- * - Perform the following operations on a list, set and map:
+ * - Perform the following operations on a list, set and map: CRUD - Create, Read, Update, Delete
  *      - add one element
  *      - get one element
  *      - remove one element
