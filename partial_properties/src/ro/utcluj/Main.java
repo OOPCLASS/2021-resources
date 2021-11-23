@@ -26,9 +26,7 @@ public class Main {
     propertyService.register(secondApartment);
     propertyService.register(thirdApartment);
 
-    Property[] propertiesToRemove = new Property[1];
-    propertiesToRemove[0] = secondApartment;
-    propertyService.remove(propertiesToRemove);
+    propertyService.remove(new Property[]{secondApartment});
 
     propertyService.printReport();
 

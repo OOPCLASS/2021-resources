@@ -22,9 +22,7 @@ public class Main {
     warehouseService.register(secondEnvelope);
     warehouseService.register(thirdEnvelope);
 
-    Package[] packagesToRemove = new Package[1];
-    packagesToRemove[0] = secondBox;
-    warehouseService.remove(packagesToRemove);
+    warehouseService.remove(new Package[]{secondBox});
 
     warehouseService.printReport();
 
