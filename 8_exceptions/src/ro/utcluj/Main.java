@@ -1,7 +1,6 @@
 package ro.utcluj;
 
-import java.io.IOException;
-import java.util.ArrayList;
+import ro.utcluj.StudentNotFoundException.ThirdPartySystem;
 
 /**
  * Create the following classes:
@@ -32,21 +31,48 @@ public class Main {
 
   public static void main(String[] args) {
     try {
-      String userInfo = getUserInfo("my-student-id");
+      String studentInfo = getStudentInfoById(123L);
+      // studentInfo - DB
     } catch (StudentNotFoundException e) {
-
+      e.getThirdPartySystem();
     }
-    // UTCN 1234
-    // I couldn;t find
+    // student - cn - 0
+    // Missing univInfo
   }
 
-  private static String getUserInfo(String studentId) {
-    throw new StudentNotFoundException();
-//    String facultyName = universityService.getFacultyNameByStudentId(studentId);
-//    String regNo = officeService.getRegNoByStudentId(studentId);
-//    return facultyName + " " + regNo;
-//    return "123";
+  private static String getStudentInfoById(long studentId) {
+//    String univInfo = universityService.findStudentInfoById(studentId);
+//    String townHallInfo = townHallService.findStudentInfoById(studentId);
+//    String libraryInfo = libraryService.findStudentInfoById(studentId);
+
+    throw new StudentNotFoundException("Nu am gasit studentul", ThirdPartySystem.LIBRARY);
+//    return univInfo + " " + townHallInfo + " " + libraryInfo;
+//    return null;
   }
 
+  private static int getInteger(int size) {
+    if (size > 10) {
+      throw new NullPointerException();
+    }
+    return 10;
+  }
 
+  private static String getString() {
+    return firstMethod();
+  }
+
+  private static String firstMethod() {
+    return secondMethod();
+  }
+
+  private static String secondMethod() {
+    if (getSecondString().equals("123")) {
+      return "1234";
+    }
+    return null;
+  }
+
+  private static Object getSecondString() {
+    return null;
+  }
 }
