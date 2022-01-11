@@ -1,6 +1,8 @@
 package ro.utcluj;
 
-import ro.utcluj.StudentNotFoundException.ThirdPartySystem;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 
 /**
  * Create the following classes:
@@ -31,48 +33,36 @@ public class Main {
 
   public static void main(String[] args) {
     try {
-      String studentInfo = getStudentInfoById(123L);
-      // studentInfo - DB
+      String userName = getUserName(100);
     } catch (StudentNotFoundException e) {
-      e.getThirdPartySystem();
+      e.printStackTrace();
+    } catch (IOException e) {
+      e.printStackTrace();
     }
-    // student - cn - 0
-    // Missing univInfo
   }
 
-  private static String getStudentInfoById(long studentId) {
-//    String univInfo = universityService.findStudentInfoById(studentId);
-//    String townHallInfo = townHallService.findStudentInfoById(studentId);
-//    String libraryInfo = libraryService.findStudentInfoById(studentId);
-
-    throw new StudentNotFoundException("Nu am gasit studentul", ThirdPartySystem.LIBRARY);
-//    return univInfo + " " + townHallInfo + " " + libraryInfo;
-//    return null;
-  }
-
-  private static int getInteger(int size) {
-    if (size > 10) {
-      throw new NullPointerException();
+  private static String getUserName(int studentId) throws IOException {
+    if (studentId > 10) {
+      throw new StudentNotFoundException("123");
+    } else if (studentId > 20) {
+      throw new IOException("altceva");
     }
-    return 10;
+    return "Alex";
   }
 
-  private static String getString() {
-    return firstMethod();
+  private static Double getFirst() {
+    return getSecond();
   }
 
-  private static String firstMethod() {
-    return secondMethod();
+  private static Double getSecond() {
+    return getThird();
   }
 
-  private static String secondMethod() {
-    if (getSecondString().equals("123")) {
-      return "1234";
-    }
-    return null;
+  private static Double getThird() {
+    return Double.valueOf("12dsf");
   }
 
-  private static Object getSecondString() {
+  private static String getName() {
     return null;
   }
 }

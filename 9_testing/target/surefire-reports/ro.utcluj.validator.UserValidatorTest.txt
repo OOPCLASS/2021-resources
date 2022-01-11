@@ -1,0 +1,13 @@
+-------------------------------------------------------------------------------
+Test set: ro.utcluj.validator.UserValidatorTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.018 sec <<< FAILURE!
+ro.utcluj.validator.UserValidatorTest.testUserIsNull()  Time elapsed: 0.018 sec  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <User cannot be null> but was: <User object cannot be null>
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
+	at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1141)
+	at ro.utcluj.validator.UserValidatorTest.testUserIsNull(UserValidatorTest.java:16)
+

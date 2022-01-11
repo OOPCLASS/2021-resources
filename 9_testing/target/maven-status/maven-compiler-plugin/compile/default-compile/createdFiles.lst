@@ -1,0 +1,3 @@
+ro\utcluj\model\User.class
+ro\utcluj\exception\ValidationFailedException.class
+ro\utcluj\validator\UserValidator.class
